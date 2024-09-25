@@ -41,7 +41,7 @@ fn main() {
             let a = 5;
             let b = 10;
             // Simulate some asynchronous computation or delay.
-            TimerFuture::new(Duration::from_secs(1)).await;
+            Timer::new(Duration::from_secs(1)).await;
             *sum.lock().unwrap() += a + b;
         }
     });
@@ -53,7 +53,7 @@ fn main() {
             let x = 3;
             let y = 7;
             // Simulate some asynchronous computation or delay.
-            TimerFuture::new(Duration::from_secs(2)).await;
+            Timer::new(Duration::from_secs(2)).await;
             *sum.lock().unwrap() += x + y;
         }
     });
