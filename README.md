@@ -23,12 +23,7 @@ use std::sync::Arc;
 
 // Import the executor module.
 // Adjust the path according to your project structure.
-use crate::executor::Executor;
-
-// An example asynchronous function.
-async fn my_async_task() {
-    println!("Hello from my async task!");
-}
+use async_rs::new_executor_and_spawner;
 
 fn main() {
     let (executor, spawner) = new_executor_and_spawner();
